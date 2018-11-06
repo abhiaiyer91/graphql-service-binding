@@ -1,6 +1,6 @@
 {
   "name": "graphql-service-binding",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:abhiaiyer91/graphql-service-binding.git",
   "author": "Abhi Aiyer <abhiaiyer91@gmail.com>",
@@ -13,5 +13,16 @@
     "graphql-tools": "^4.0.3",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@types/graphql": "^14.0.3",
+    "@types/isomorphic-fetch": "^0.0.34",
+    "@types/lodash": "^4.14.118"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "prepare": "rimraf ./lib && tsc --project tsconfig.json",
+    "lint": "tslint --project tsconfig.json --fix",
+    "format": "prettier --write \"{src,__tests__}/*.{ts,tsx,js}\""
   }
 }

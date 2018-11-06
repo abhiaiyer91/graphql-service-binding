@@ -16,7 +16,7 @@ export class ServiceLink extends HttpLink {
     super({
       uri,
       headers,
-      fetch
+      fetch,
     });
   }
 }
@@ -25,7 +25,7 @@ export default class ServiceBinding extends Binding {
   constructor({ typeDefs, headers = {}, headersToForward = [], uri }) {
     const http = new ServiceLink({
       headers,
-      uri
+      uri,
     });
 
     const link = setContext((_request, previousContext) => {
@@ -36,17 +36,17 @@ export default class ServiceBinding extends Binding {
       const headersForContext = {
         ...headers,
         ...get(previousGraphQLContext, 'headers', {}),
-        ...contextToForward
+        ...contextToForward,
       };
 
       return {
-        headers: headersForContext
+        headers: headersForContext,
       };
     }).concat(http);
 
     const schema = makeRemoteExecutableSchema({
       schema: typeDefs,
-      link
+      link,
     });
 
     super({ schema });
