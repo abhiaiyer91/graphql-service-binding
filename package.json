@@ -1,0 +1,17 @@
+{
+  "name": "graphql-service-binding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:abhiaiyer91/graphql-service-binding.git",
+  "author": "Abhi Aiyer <abhiaiyer91@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-link-context": "^1.0.9",
+    "apollo-link-http": "^1.5.5",
+    "graphql": "^14.0.2",
+    "graphql-binding": "^2.2.6",
+    "graphql-tools": "^4.0.3",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.11"
+  }
+}
